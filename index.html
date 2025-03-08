@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="https://img.freepik.com/free-vector/branding-identity-corporate-vector-logo-design_460848-8717.jpg?t=st=1741474425~exp=1741478025~hmac=940b94c8c2fa2d96cef137e291294d852c19a04e5d44615acd238ac93e4baf29&w=2000"
+          alt="Logo"
+          class="logo" />
+        <button id="toggleSidebar">
+          <span class="material-icons">menu</span>
+        </button>
+      </div>
+
+      <ul class="menu">
+        <li class="active" onclick="showSection('customers')">
+          <span class="material-icons">person</span>
+          <span class="menu-text">Customers</span>
+        </li>
+        <li onclick="showSection('suppliers')">
+          <span class="material-icons">store</span>
+          <span class="menu-text">Suppliers</span>
+        </li>
+        <li onclick="showSection('expenses')">
+          <span class="material-icons">receipt</span>
+          <span class="menu-text">Expenses</span>
+        </li>
+        <li onclick="showSection('recordbook')">
+          <span class="material-icons">book</span>
+          <span class="menu-text">Record Book</span>
+        </li>
+        <li onclick="showSection('staff')">
+          <span class="material-icons">people</span>
+          <span class="menu-text">Staff</span>
+        </li>
+        <li onclick="showSection('reports')">
+          <span class="material-icons">bar_chart</span>
+          <span class="menu-text">Reports</span>
+        </li>
+        <li onclick="showSection('parties')">
+          <span class="material-icons">group</span>
+          <span class="menu-text">Parties</span>
+        </li>
+        <li onclick="showSection('settings')">
+          <span class="material-icons">settings</span>
+          <span class="menu-text">Settings</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Left Side (Toggle Buttons) -->
+      <div class="left-section">
+        <div class="toggle-buttons">
+          <button onclick="showSection('customers')" class="toggle-btn active">
+            Customers
+          </button>
+          <button onclick="showSection('suppliers')" class="toggle-btn">
+            Suppliers
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Side (Customers or Suppliers) -->
+      <div class="right-section">
+        <div id="customers" class="section active">
+          <h2>Customers</h2>
+          <p>Customer list will be displayed here.</p>
+        </div>
+
+        <div id="suppliers" class="section">
+          <h2>Suppliers</h2>
+          <p>Supplier list will be displayed here.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

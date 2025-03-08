@@ -1,0 +1,164 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: #1e1e2d;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #29293d;
+  height: 55px;
+}
+
+.logo {
+  width: 120px;
+  transition: opacity 0.3s, width 0.3s;
+}
+
+#toggleSidebar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Sidebar Menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.menu li {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.3s, padding-left 0.3s;
+}
+
+.menu li:hover,
+.menu li.active {
+  background: #ff4757;
+}
+
+.menu li .material-icons {
+  font-size: 22px;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Smooth Collapsed Sidebar */
+.sidebar.collapsed {
+  width: 70px;
+  transform: translateX(0);
+}
+
+.sidebar.collapsed .menu li {
+  justify-content: center;
+  padding-left: 0;
+}
+
+.sidebar.collapsed .menu-text {
+  display: none;
+}
+
+.sidebar.collapsed .logo {
+  width: 0;
+  opacity: 0;
+}
+
+.sidebar.collapsed #toggleSidebar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Ensure main content starts after sidebar */
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 250px; /* Sidebar default width */
+  width: calc(100% - 250px); /* Adjust width dynamically */
+  height: 100vh;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+}
+
+/* When Sidebar is Collapsed */
+.sidebar.collapsed ~ .main-content {
+  left: 70px; /* Collapsed sidebar width */
+  width: calc(100% - 70px);
+}
+
+/* Two Equal Sections */
+.left-section,
+.right-section {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+
+/* Left Section (Blank for now) */
+.left-section {
+  background-color: red;
+}
+
+/* Right Section (Customers/Suppliers) */
+.right-section {
+  background-color: white;
+  border-left: 2px solid #ddd;
+  overflow-y: auto;
+}
+
+/* Toggle Button Container */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Toggle Buttons */
+.toggle-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background: #29293d;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+  background: #44445e;
+}
+
+/* Active Button */
+.toggle-btn.active {
+  background: #007bff;
+}
