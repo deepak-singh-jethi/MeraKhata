@@ -70,7 +70,8 @@
     <div class="main-content">
       <!-- Left Side (With Toggle Buttons & Dynamic Add Button) -->
       <div class="left-section">
-        <div class="toggle-buttons bottom-line">
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
           <button class="toggle-btn active" onclick="showSection('customers')">
             Customers
           </button>
@@ -78,257 +79,234 @@
             Suppliers
           </button>
         </div>
-        <hr />
 
-        <!-- Scrollable Table Container -->
-        <div class="left-table-container">
-          <table class="left-data-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Phone</th>
-              </tr>
-            </thead>
+        <!-- TRANSACTION SUMMARY -->
+        <div class="transaction-summary bottom-line">
+          <p>You'll Give: <span class="negative">₹100</span></p>
+          <p>You'll Get: <span class="positive">₹1,206</span></p>
+          <button class="reports-btn" onclick="showSection('parties')">
+            Reports
+          </button>
+        </div>
+
+        <!-- FILTER SECTION (Now Side by Side) -->
+        <div class="filter-section bottom-line">
+          <div class="filter-item">
+            <label>Search for Customers</label>
+            <input type="text" placeholder="Name or Phone" />
+          </div>
+          <div class="filter-item">
+            <label>Filter By</label>
+            <select>
+              <option>ALL</option>
+              <option>You'll Give</option>
+              <option>You'll Get</option>
+              <option>SETTLED</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <label>Sort By</label>
+            <select>
+              <option>Most Recent</option>
+              <option>Highest Amount</option>
+              <option>Least Amount</option>
+              <option>Oldest</option>
+              <option>By Name</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- SCROLLABLE TRANSACTION TABLE -->
+        <table class="transaction-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+        </table>
+        <div class="transaction-table-container">
+          <table class="transaction-table">
             <tbody>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>qe213123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>ullu</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>123123123</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>23412341324</td>
+                <td>₹10 (You'll Get)</td>
               </tr>
               <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
-              </tr>
-              <tr>
-                <td>Rahul</td>
-                <td>+91 9876543210</td>
+                <td>111111</td>
+                <td>₹1,155 (You'll Get)</td>
               </tr>
             </tbody>
           </table>
