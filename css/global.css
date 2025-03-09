@@ -5,3 +5,7 @@ body {
   display: flex;
   overflow: hidden; /* Prevent scrolling */
 }
+
+.bottom-line {
+  border-bottom: 2px solid black;
+}

@@ -6,7 +6,7 @@
   height: 100vh;
   display: flex;
   transition: all 0.3s ease-in-out;
-  padding: 20px;
+  padding-inline: 20px;
   z-index: -10;
   overflow: hidden; /* Prevent scrolling */
 }
