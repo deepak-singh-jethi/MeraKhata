@@ -91,7 +91,6 @@
   padding: 8px;
   border-radius: 8px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
   gap: 20px; /* Adjusted gap */
 }
 
@@ -151,9 +150,10 @@
 }
 
 .transaction-table th {
-  background: #007bff;
-  color: white;
   text-align: left;
+  padding-block: 2px;
+  font-size: 20px;
+  color: #545454;
 }
 
 .transaction-table tr:nth-child(even) {
