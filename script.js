@@ -35,4 +35,15 @@ function showSection(sectionId) {
   document
     .querySelector(`.toggle-btn[onclick="showSection('${sectionId}')"]`)
     ?.classList.add("active");
+
+  // Toggle Customer & Supplier List in Right Section
+  if (sectionId === "customers") {
+    document.getElementById("customers").style.display = "block";
+    document.getElementById("suppliers").style.display = "none";
+    document.getElementById("addButton").textContent = "Add Customer"; // Update button text
+  } else if (sectionId === "suppliers") {
+    document.getElementById("customers").style.display = "none";
+    document.getElementById("suppliers").style.display = "block";
+    document.getElementById("addButton").textContent = "Add Supplier"; // Update button text
+  }
 }

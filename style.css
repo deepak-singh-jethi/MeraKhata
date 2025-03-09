@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /* Sidebar Styles */
@@ -96,21 +97,27 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-/* Ensure main content starts after sidebar */
+
+/* *************************** */
+/* *************************** */
+
+/* Main Content (No Scroll) */
 .main-content {
   position: absolute;
   top: 0;
-  left: 250px; /* Sidebar default width */
-  width: calc(100% - 250px); /* Adjust width dynamically */
+  left: 250px;
+  width: calc(100% - 250px);
   height: 100vh;
   display: flex;
   transition: all 0.3s ease-in-out;
   padding: 20px;
+  z-index: -10;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /* When Sidebar is Collapsed */
 .sidebar.collapsed ~ .main-content {
-  left: 70px; /* Collapsed sidebar width */
+  left: 70px;
   width: calc(100% - 70px);
 }
 
@@ -122,16 +129,42 @@ body {
   padding: 20px;
 }
 
-/* Left Section (Blank for now) */
+/* Left Section */
 .left-section {
-  background-color: red;
+  background-color: whitesmoke;
 }
+
+/* Add Button Container (Fixed at Bottom) */
+.add-button-container {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  width: auto;
+}
+
+#addButton {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addButton:hover {
+  background-color: #218838;
+}
+
+/* ******************************/
+/* ******************************/
 
 /* Right Section (Customers/Suppliers) */
 .right-section {
   background-color: white;
   border-left: 2px solid #ddd;
-  overflow-y: auto;
+  overflow-y: auto; /* Scroll only for right section */
 }
 
 /* Toggle Button Container */
@@ -161,4 +194,29 @@ body {
 /* Active Button */
 .toggle-btn.active {
   background: #007bff;
+}
+
+/* Table Styling */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.data-table th {
+  background: #007bff;
+  color: white;
+}
+
+.data-table tr:hover {
+  background: #f1f1f1;
+  transition: 0.3s;
 }

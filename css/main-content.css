@@ -1,0 +1,18 @@
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  height: 100vh;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+  z-index: -10;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* When Sidebar is Collapsed */
+.sidebar.collapsed ~ .main-content {
+  left: 70px;
+  width: calc(100% - 70px);
+}

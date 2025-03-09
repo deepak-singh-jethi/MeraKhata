@@ -1,0 +1,8 @@
+.right-section {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  background-color: white;
+  border-left: 2px solid #ddd;
+  overflow-y: auto; /* Scroll only for right section */
+}

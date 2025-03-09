@@ -1,0 +1,14 @@
+.left-section {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+/* Add Button Container (Fixed at Bottom) */
+.add-button-container {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  width: auto;
+}
