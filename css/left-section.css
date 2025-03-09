@@ -3,12 +3,79 @@
   height: 100%;
   padding: 20px;
   background-color: whitesmoke;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Add Button Container (Fixed at Bottom) */
-.add-button-container {
+/* Scrollable Table Container */
+.left-table-container {
+  flex-grow: 1; /* Allows table to take up available space */
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 10px;
+  max-height: calc(100vh - 180px);
+}
+
+/* Table Styling */
+.left-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.left-data-table th,
+.left-data-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.left-data-table th {
+  background: #007bff;
+  color: white;
+}
+
+.left-data-table tr:hover {
+  background: #f1f1f1;
+  transition: 0.3s;
+}
+
+/* Blurry Effect for Button Background */
+.left-button-main-wrapper {
+  width: 100%;
   position: absolute;
   bottom: 60px;
-  left: 20px;
-  width: auto;
+  left: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Adding Blur Effect */
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.9) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Button Styling */
+#addButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addButton:hover {
+  background-color: #218838;
+  transform: scale(1.05);
 }
