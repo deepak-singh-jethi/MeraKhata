@@ -1,7 +1,7 @@
 /* Left Section */
 .left-section {
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  height: 100vh; /* Ensures it takes full screen height */
   padding-top: 20px;
   background-color: #f8f9fa;
   position: relative;
@@ -126,11 +126,20 @@
   background: white;
   border-radius: 8px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 300px); /* Adjust based on layout */
+  min-height: 100px;
+  padding-bottom: 80px; /* Prevents overlap with Add Button */
 }
 
 .transaction-table {
   width: 100%;
   border-collapse: collapse;
+}
+.transaction-table tbody tr,
+.transaction-table thead tr {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 40px;
 }
 
 .transaction-table th,
@@ -158,16 +167,16 @@
 /* Floating Add Button */
 .left-button-main-wrapper {
   width: 100%;
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  background: rgba(255, 255, 255, 0.7);
-  height: 70px;
+  position: sticky;
+  bottom: 0; /* Stick at the bottom */
+  background: rgba(255, 255, 255, 0.9);
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
   border-radius: 8px;
+  z-index: 10; /* Ensures it's above the content */
 }
 
 #addButton {
